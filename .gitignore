@@ -1,0 +1,18 @@
+# IDE files
+.idea/
+*.iml
+
+# Java build output
+*.class
+out/
+target/
+build/
+.gradle/
+
+# Operating system files
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+!.env.example
