@@ -6,6 +6,7 @@
 
 - [1 — ExampleProject](lessons/1/ExampleProject/) — первый проект и работа с массивом.
 - [2 — AnimalsProject](lessons/2/AnimalsProject/) — классы и объекты, переименование Cat в Dog.
+- [3 — NumbersProject](lessons/3/NumbersProject/) — исправление ошибок в типах данных.
 
 ## Как запустить урок
 
@@ -21,4 +22,4 @@ java -cp out Main
 
 Во втором уроке запускаю `Loader` вместо `Main`: `java -cp out Loader`.
 
-В IntelliJ IDEA открываю проект, выбираю JDK 17 и нажимаю ▶ возле метода `main`: в первом уроке — в `Main`, во втором — в `Loader`.
+В IntelliJ IDEA открываю проект, выбираю JDK 17 и нажимаю ▶ возле метода `main`: в первом и третьем уроках — в `Main`, во втором — в `Loader`.
