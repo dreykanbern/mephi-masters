@@ -1,5 +1,25 @@
-# MEPhI Master’s Studies
+# МИФИ — магистратура
 
-Coursework, exercises, and study notes for my master’s studies at MEPhI.
+Мои задания по учёбе в магистратуре МИФИ.
 
-- [Java](java/) — Java coursework and exercises.
+[Java — уроки и запуск](java/README.md).
+
+## Работа с Git
+
+- Ветка для урока: `lessons/1`, `lessons/2` и так далее.
+- Коммит: `lessons/1: Первый урок по Java`.
+- Для каждой ветки — отдельный MR в `main`.
+
+Один раз включаю хуки из корня репозитория (нужен Python 3):
+
+```bash
+./scripts/install-hooks.sh
+```
+
+После коммита отправляю ветку и открываю MR:
+
+```bash
+./scripts/publish.sh
+```
+
+Для этого нужен GitHub CLI (`gh`) и вход через `gh auth login`.
