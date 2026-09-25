@@ -9,6 +9,7 @@
 - [3 — NumbersProject](lessons/3/NumbersProject/) — исправление ошибок в типах данных.
 - [4 — ClassProject и VariableProject](lessons/4/) — исправление объявления класса и имени переменной.
 - 5 — [CarProject](lessons/5/CarProject/) и [NewCarProject](lessons/5/NewCarProject/) — создание класса, объектов и вызов метода.
+- [6 — StaticCarProject](lessons/6/StaticCarProject/) — вызов статического метода без создания объекта.
 
 ## Как запустить урок
 
