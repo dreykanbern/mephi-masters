@@ -1,0 +1,262 @@
+Выводы из SSH-сессии пользователя от 2026-09-29 (MSK).
+Подключение: ssh niderlands
+Пользователь: root
+Время отдельных замеров: uptime — 12:30:49, top — 12:31:48 (MSK).
+Имя хоста: v7890.hosted-by-vdsina.com
+
+ОБЯЗАТЕЛЬНАЯ ЧАСТЬ
+
+1. Команда: whoami && id
+Вывод:
+root
+uid=0(root) gid=0(root) groups=0(root),999(docker)
+Что это значит: сессия работает от root с UID 0 и GID 0, входящего в группы root и docker (GID 999), то есть с правами администратора системы.
+
+2. Команда: uname -a
+Вывод:
+Linux v7890.hosted-by-vdsina.com 5.15.0-170-generic #180-Ubuntu SMP Fri Jan 9 16:10:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Что это значит: сервер v7890.hosted-by-vdsina.com работает под ядром Linux 5.15.0-170-generic сборки Ubuntu #180 на 64-разрядной архитектуре x86_64.
+
+3. Команда: cat /etc/os-release
+Вывод:
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+Что это значит: установлен дистрибутив Ubuntu 22.04.5 LTS с кодовым именем Jammy Jellyfish, относящийся к семейству Debian.
+
+4. Команда: uptime
+Вывод:
+ 12:30:49 up 72 days, 22:50,  1 user,  load average: 0.00, 0.00, 0.00
+Что это значит: в 12:30:49 сервер работал без перезагрузки 72 дня 22 часа 50 минут, была зарегистрирована одна пользовательская сессия, а средняя нагрузка за 1, 5 и 15 минут составляла 0.00.
+
+5. Команда: free -h
+Вывод:
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       300Mi       101Mi       1.0Mi       1.5Gi       1.4Gi
+Swap:             0B          0B          0B
+Что это значит: из 1.9 GiB оперативной памяти занято 300 MiB, полностью свободно 101 MiB, под буферы и кэш отведено 1.5 GiB, для приложений доступно около 1.4 GiB с учётом освобождаемого кэша, а swap отсутствует.
+
+6. Команда: df -h
+Вывод:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/vda1        40G   11G   27G  29% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+overlay          40G   11G   27G  29% /var/lib/docker/overlay2/c89821c21e014202bd3e1ca5a5a26a4f1a5da930db7943c6db63eae4f1d1c6f4/merged
+tmpfs           197M  4.0K  197M   1% /run/user/0
+Что это значит: корневая файловая система /dev/vda1 объёмом 40 GiB занята на 29% (11 GiB), доступно 27 GiB, а Docker overlay использует ту же дисковую ёмкость и не является отдельным диском.
+
+7. Команда: lsblk
+Вывод:
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0  50.3M  1 loop /snap/snapd/27738
+loop2    7:2    0  63.8M  1 loop /snap/core20/2922
+loop3    7:3    0    74M  1 loop /snap/core22/2437
+loop4    7:4    0  50.1M  1 loop /snap/snapd/27710
+loop5    7:5    0 115.2M  1 loop /snap/lxd/40911
+loop6    7:6    0  63.8M  1 loop /snap/core20/2866
+loop7    7:7    0    74M  1 loop /snap/core22/2955
+loop8    7:8    0 115.3M  1 loop /snap/lxd/40575
+vda    252:0    0    40G  0 disk
+└─vda1 252:1    0    40G  0 part /
+Что это значит: виртуальный диск vda объёмом 40 GiB содержит раздел vda1, смонтированный в /, а восемь loop-устройств доступны только для чтения и используются пакетами Snap.
+
+8. Команда: nproc
+Вывод:
+1
+Что это значит: текущему процессу доступна одна вычислительная единица CPU, то есть один логический процессор.
+
+9. Команда: ps aux | head -20
+Вывод:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.6 167676 12792 ?        Ss   Jul18   6:42 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Jul18   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Jul18   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Jul18   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   Jul18   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   Jul18   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   Jul18   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   Jul18   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    Jul18   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    Jul18   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    Jul18  52:57 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    Jul18   2:15 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    Jul18   0:34 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    Jul18   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    Jul18   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    Jul18   0:00 [kdevtmpfs]
+root          20  0.0  0.0      0     0 ?        I<   Jul18   0:00 [inet_frag_wq]
+root          21  0.0  0.0      0     0 ?        S    Jul18   0:00 [kauditd]
+root          22  0.0  0.0      0     0 ?        S    Jul18   0:03 [khungtaskd]
+Что это значит: показана часть списка процессов, работающих от root: /sbin/init с номером процесса 1 (PID 1) управляет запуском системы и служб, а записи в квадратных скобках обозначают внутренние задачи ядра Linux.
+
+БАЗА
+
+10. Команда: top -bn1 | head -20
+Вывод:
+top - 12:31:48 up 72 days, 22:51,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 156 total,   1 running, 155 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  6.2 sy,  0.0 ni, 93.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1963.8 total,    101.4 free,    299.8 used,   1562.6 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1483.9 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0  167676  12792   8008 S   0.0   0.6   6:42.06 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.78 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace
+     13 root      20   0       0      0      0 S   0.0   0.0  52:57.45 ksoftirqd/0
+     14 root      20   0       0      0      0 I   0.0   0.0   2:15.11 rcu_sched
+     15 root      rt   0       0      0      0 S   0.0   0.0   0:34.70 migration/0
+Что это значит: снимок в 12:31:48 показывает 156 задач (одна выполняется, 155 спят, зомби нет), 93.8% времени CPU приходится на простой, а из 1963.8 MiB RAM доступно 1483.9 MiB.
+
+11. Команда: cat /proc/meminfo | head -10
+Вывод:
+MemTotal:        2010964 kB
+MemFree:          103868 kB
+MemAvailable:    1519540 kB
+Buffers:           78956 kB
+Cached:          1434920 kB
+SwapCached:            0 kB
+Active:           920728 kB
+Inactive:         766852 kB
+Active(anon):       1076 kB
+Inactive(anon):   182756 kB
+Что это значит: ядро учитывает 2010964 KiB RAM, из которых полностью свободно 103868 KiB, приложениям доступно 1519540 KiB, а файловый кэш занимает 1434920 KiB (обозначение kB в /proc/meminfo соответствует KiB).
+
+12. Команда: ls -l /etc/ | head -15
+Вывод:
+total 872
+-rw-r--r-- 1 root root       3028 Aug 10  2023 adduser.conf
+drwxr-xr-x 2 root root       4096 Feb 17  2026 alternatives
+drwxr-xr-x 3 root root       4096 Feb 17  2026 apparmor
+drwxr-xr-x 8 root root       4096 Feb 17  2026 apparmor.d
+drwxr-xr-x 3 root root       4096 Feb 17  2026 apport
+drwxr-xr-x 8 root root       4096 Nov 28  2023 apt
+-rw-r--r-- 1 root root       2319 Jan  6  2022 bash.bashrc
+-rw-r--r-- 1 root root         45 Nov 11  2021 bash_completion
+drwxr-xr-x 2 root root       4096 Feb 17  2026 bash_completion.d
+-rw-r--r-- 1 root root        367 Dec 16  2020 bindresvport.blacklist
+drwxr-xr-x 2 root root       4096 Mar 20  2023 binfmt.d
+drwxr-xr-x 2 root root       4096 Aug 10  2023 byobu
+drwxr-xr-x 3 root root       4096 Aug 10  2023 ca-certificates
+-rw-r--r-- 1 root root       6529 Feb 17  2026 ca-certificates.conf
+Что это значит: показанные файлы и каталоги /etc принадлежат root:root, например adduser.conf имеет размер 3028 байт и права 644 (запись только владельцу), а каталог alternatives права 755 (вход разрешён всем).
+
+ПРОДВИНУТЫЙ
+
+13. Команда: cat /proc/cpuinfo | grep "model name" | uniq
+Вывод:
+model name	: Common KVM processor
+Что это значит: операционная система видит виртуальный процессор с моделью Common KVM processor, поэтому по этому выводу нельзя определить точную модель физического CPU хоста.
+
+14. Команда: pstree -p | head -30
+Вывод:
+systemd(1)-+-ModemManager(534)-+-{ModemManager}(550)
+           |                   `-{ModemManager}(554)
+           |-agetty(772)
+           |-containerd(513)-+-{containerd}(545)
+           |                 |-{containerd}(546)
+           |                 |-{containerd}(547)
+           |                 |-{containerd}(548)
+           |                 |-{containerd}(564)
+           |                 |-{containerd}(568)
+           |                 `-{containerd}(57362)
+           |-containerd-shim(1003)-+-dumb-init(1027)---node(1045)-+-{node}(1067)
+           |                       |                              |-{node}(1068)
+           |                       |                              |-{node}(1069)
+           |                       |                              |-{node}(1070)
+           |                       |                              |-{node}(1071)
+           |                       |                              |-{node}(1072)
+           |                       |                              |-{node}(1073)
+           |                       |                              |-{node}(1074)
+           |                       |                              |-{node}(1075)
+           |                       |                              |-{node}(1076)
+           |                       |                              `-{node}(1077)
+           |                       |-{containerd-shim}(1004)
+           |                       |-{containerd-shim}(1005)
+           |                       |-{containerd-shim}(1006)
+           |                       |-{containerd-shim}(1007)
+           |                       |-{containerd-shim}(1008)
+           |                       |-{containerd-shim}(1009)
+           |                       |-{containerd-shim}(1010)
+           |                       |-{containerd-shim}(1011)
+           |                       |-{containerd-shim}(1012)
+Что это значит: дерево начинается с systemd (PID 1), которому подчинены службы, а ветка containerd-shim (PID 1003) -> dumb-init (PID 1027) -> node (PID 1045) показывает родительские связи процессов контейнера, где фигурными скобками обозначены потоки.
+
+15. Команда: cat /proc/1/status
+Вывод:
+Name:	systemd
+Umask:	0000
+State:	S (sleeping)
+Tgid:	1
+Ngid:	0
+Pid:	1
+PPid:	0
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	256
+Groups:
+NStgid:	1
+NSpid:	1
+NSpgid:	1
+NSsid:	1
+VmPeak:	  231828 kB
+VmSize:	  167676 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   13160 kB
+VmRSS:	   12792 kB
+RssAnon:	    4784 kB
+RssFile:	    8008 kB
+RssShmem:	       0 kB
+VmData:	   19892 kB
+VmStk:	    1036 kB
+VmExe:	     896 kB
+VmLib:	    9056 kB
+VmPTE:	      84 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+Threads:	1
+SigQ:	0/7394
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	7be3c0fe28014a03
+SigIgn:	0000000000001000
+SigCgt:	00000001000004ec
+CapInh:	0000000000000000
+CapPrm:	000001ffffffffff
+CapEff:	000001ffffffffff
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	thread vulnerable
+SpeculationIndirectBranch:	conditional enabled
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	2707682
+nonvoluntary_ctxt_switches:	104086
+Что это значит: процесс с PID 1 — systemd, системный менеджер инициализации и служб, который работает от root (UID 0), находится в состоянии сна S и занимает 12792 KiB резидентной памяти.
