@@ -11,6 +11,7 @@
 - 5 — [CarProject](lessons/5/CarProject/) и [NewCarProject](lessons/5/NewCarProject/) — создание класса, объектов и вызов метода.
 - [6 — StaticCarProject](lessons/6/StaticCarProject/) — вызов статического метода без создания объекта.
 - [7 — HelloWorldProject](lessons/7/HelloWorldProject/) — порядок вызовов методов и вывод `Hello world!`.
+- [8 — AddProject](lessons/8/AddProject/) — исправление синтаксиса и возвращаемое значение метода.
 
 ## Как запустить урок
 
