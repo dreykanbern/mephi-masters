@@ -19,3 +19,6 @@ build/
 
 # Python cache for Git hooks and their tests
 __pycache__/
+
+# Resource monitoring runtime log
+/sysadmin/homework/1/my-sysadmin-scripts/monitor.log
