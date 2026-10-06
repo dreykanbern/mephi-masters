@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-set -e  # Остановить скрипт, если команда завершилась с ошибкой.
+set -euo pipefail
 
-INTERVAL=5  # Пауза между снимками в секундах.
+trap 'exit 0' TERM INT
 
 while true; do
     {
@@ -10,7 +10,7 @@ while true; do
         df -h
         uptime
         echo
-    } >> monitor.log
+    } | tee -a monitor.log
 
-    sleep "$INTERVAL"
+    sleep 5
 done
