@@ -5,8 +5,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www
-COPY script.sh /usr/local/bin/script.sh
-RUN chmod +x /usr/local/bin/script.sh
+COPY script.sh entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/script.sh /usr/local/bin/entrypoint.sh
 
 EXPOSE 8080
-CMD ["/bin/bash", "-c", "/usr/local/bin/script.sh & exec python3 -u -m http.server 8080"]
+CMD ["/usr/local/bin/entrypoint.sh"]
