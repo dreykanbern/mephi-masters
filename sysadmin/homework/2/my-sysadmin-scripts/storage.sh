@@ -24,6 +24,8 @@ done
 LOOP1=$(losetup --find --show --nooverlap "$LAB/disk1.img")
 LOOP2=$(losetup --find --show --nooverlap "$LAB/disk2.img")
 LOOP3=$(losetup --find --show --nooverlap "$LAB/disk3.img")
+# После загрузки udev может собирать сохранённый RAID; дождёмся окончания.
+udevadm settle --timeout=30
 printf 'RAID: %s + %s; LVM: %s\n' "$LOOP1" "$LOOP2" "$LOOP3"
 
 if mdadm --detail /dev/md0 &>/dev/null; then
