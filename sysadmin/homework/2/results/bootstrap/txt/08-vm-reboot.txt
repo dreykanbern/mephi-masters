@@ -1,0 +1,29 @@
+root@miphy-hw2:~# cat /root/homework2-before-reboot.txt
+fa567a41-0626-4ee7-9029-3f2cdec8a4e8
+root@miphy-hw2:~# cat /proc/sys/kernel/random/boot_id
+f901905c-53cb-4a8a-b874-ad5dfb162bc7
+root@miphy-hw2:~# systemctl is-active my-app my-app-storage nginx
+active
+active
+active
+root@miphy-hw2:~# systemctl is-enabled my-app my-app-storage nginx
+enabled
+enabled
+enabled
+root@miphy-hw2:~# df -h /mnt/raid /mnt/logs
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/md0                     463M   28K  427M   1% /mnt/raid
+/dev/mapper/vg_data-lv_logs  266M  240K  248M   1% /mnt/logs
+root@miphy-hw2:~# sha256sum -c /root/homework2-data.sha256
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK
+root@miphy-hw2:~# curl -kI https://127.0.0.1/monitor.log
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 09:07:38 GMT
+Content-Type: application/octet-stream
+Content-Length: 209732
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 09:07:36 GMT
+
+root@miphy-hw2:~#

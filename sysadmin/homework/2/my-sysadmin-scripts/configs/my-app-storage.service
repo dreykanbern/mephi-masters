@@ -1,0 +1,14 @@
+# my-app
+[Unit]
+Description=RAID and LVM loop storage
+After=local-fs.target
+Before=my-app.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/my-app/storage.sh
+RemainAfterExit=yes
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

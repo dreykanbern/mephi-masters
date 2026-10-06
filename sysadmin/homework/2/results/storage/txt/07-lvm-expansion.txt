@@ -1,0 +1,27 @@
+root@miphy-hw2:~# cat /root/expand-vm.txt
+До расширения:
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 200.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/vg_data-lv_logs  172M   40K  158M   1% /mnt/logs
+  Size of logical volume vg_data/lv_logs changed from 200.00 MiB (50 extents) to 300.00 MiB (75 extents).
+  Logical volume vg_data/lv_logs successfully resized.
+resize2fs 1.46.5 (30-Dec-2021)
+Filesystem at /dev/vg_data/lv_logs is mounted on /mnt/logs; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/vg_data/lv_logs is now 76800 (4k) blocks long.
+
+После расширения:
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 300.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/vg_data-lv_logs  266M   40K  250M   1% /mnt/logs
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK
+root@miphy-hw2:~# lvs
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 300.00m                                                    
+root@miphy-hw2:~# sha256sum -c /root/homework2-data.sha256
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK
+root@miphy-hw2:~#

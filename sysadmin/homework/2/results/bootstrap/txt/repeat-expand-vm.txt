@@ -1,0 +1,155 @@
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.29).
+lvm2 is already the newest version (2.03.11-2.1ubuntu5).
+mdadm is already the newest version (4.2-0ubuntu2).
+nginx is already the newest version (1.18.0-6ubuntu14.21).
+openssl is already the newest version (3.0.2-0ubuntu1.30).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Docker Compose version 2.40.3+ds1-0ubuntu1~22.04.1
+RAID: /dev/loop3 + /dev/loop4; LVM: /dev/loop5
+  1 logical volume(s) in volume group "vg_data" now active
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 loop4[1] loop3[0]
+      523264 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 200.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/md0                     463M   28K  427M   1% /mnt/raid
+/dev/mapper/vg_data-lv_logs  172M   36K  158M   1% /mnt/logs
+time="2026-10-06T08:32:08Z" level=warning msg="Docker Compose is configured to build using Bake, but buildx isn't installed"
+#0 building with "default" instance using docker driver
+
+#1 [my-app internal] load build definition from Dockerfile
+#1 transferring dockerfile: 361B done
+#1 DONE 0.0s
+
+#2 [my-app internal] load metadata for docker.io/library/ubuntu:22.04
+#2 DONE 0.2s
+
+#3 [my-app internal] load .dockerignore
+#3 transferring context: 81B done
+#3 DONE 0.0s
+
+#4 [my-app 1/5] FROM docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#4 resolve docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401 done
+#4 DONE 0.0s
+
+#5 [my-app internal] load build context
+#5 transferring context: 64B done
+#5 DONE 0.0s
+
+#6 [my-app 2/5] RUN apt-get update     && apt-get install -y --no-install-recommends python3 procps     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [my-app 4/5] COPY script.sh entrypoint.sh /usr/local/bin/
+#7 CACHED
+
+#8 [my-app 3/5] WORKDIR /var/www
+#8 CACHED
+
+#9 [my-app 5/5] RUN chmod +x /usr/local/bin/script.sh /usr/local/bin/entrypoint.sh
+#9 CACHED
+
+#10 [my-app] exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:51006f34a52b0a0b9a99611cbb576efd8a6595d2de1ac0cdf430f9ab339e2fdb done
+#10 exporting config sha256:b6a72530bdefb9c352fbecc61bdbaf3e14e35bcba9fd73ac0e380fd4cf3c8f28 done
+#10 exporting attestation manifest sha256:6612372871a66c9c285e94321d89a3a72402113734fc94bd117b608e1c2d6b2f done
+#10 exporting manifest list sha256:1ff313e4d559ba178bc44b07ca9da12a15310cace165195577b1eee8d2f35d17 done
+#10 naming to docker.io/library/my-script:hw2 done
+#10 unpacking to docker.io/library/my-script:hw2 done
+#10 DONE 0.0s
+
+#11 [my-app] resolving provenance for metadata file
+#11 DONE 0.0s
+ my-app  Built
+ Container my-app  Recreate
+ Container my-app  Recreated
+ Container my-app  Starting
+ Container my-app  Started
+ Container my-app  Stopping
+ Container my-app  Stopped
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nginx
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:32:12 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: https://my-app.local/
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:32:12 GMT
+Content-Type: application/octet-stream
+Content-Length: 4660
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 08:32:10 GMT
+
+● my-app.service - Homework monitoring container
+     Loaded: loaded (/etc/systemd/system/my-app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2026-10-06 08:32:09 UTC; 3s ago
+    Process: 5029 ExecStartPre=/usr/bin/mountpoint -q /mnt/logs (code=exited, status=0/SUCCESS)
+   Main PID: 5030 (docker)
+      Tasks: 9 (limit: 3435)
+     Memory: 8.3M
+        CPU: 10ms
+     CGroup: /system.slice/my-app.service
+             └─5030 /usr/bin/docker start -a my-app
+
+Oct 06 08:32:10 miphy-hw2 docker[5030]: /dev/vda1                     12G  3.2G  8.3G  28% /usr/sbin/docker-init
+Oct 06 08:32:10 miphy-hw2 docker[5030]: /dev/mapper/vg_data-lv_logs  172M   36K  158M   1% /var/www
+Oct 06 08:32:10 miphy-hw2 docker[5030]: tmpfs                        1.5G     0  1.5G   0% /proc/acpi
+Oct 06 08:32:10 miphy-hw2 docker[5030]: tmpfs                        1.5G     0  1.5G   0% /proc/scsi
+Oct 06 08:32:10 miphy-hw2 docker[5030]: tmpfs                        1.5G     0  1.5G   0% /sys/devices/virtual/powercap
+Oct 06 08:32:10 miphy-hw2 docker[5030]: tmpfs                        1.5G     0  1.5G   0% /sys/firmware
+Oct 06 08:32:10 miphy-hw2 docker[5030]:  08:32:10 up 0 min,  0 users,  load average: 0.67, 0.19, 0.06
+Oct 06 08:32:10 miphy-hw2 docker[5030]: Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) ...
+Oct 06 08:32:12 miphy-hw2 docker[5030]: 172.18.0.1 - - [06/Oct/2026 08:32:12] "GET /monitor.log HTTP/1.1" 200 -
+Oct 06 08:32:12 miphy-hw2 docker[5030]: 172.18.0.1 - - [06/Oct/2026 08:32:12] "HEAD /monitor.log HTTP/1.0" 200 -
+Готово. Проверка: curl -k --resolve my-app.local:443:127.0.0.1 https://my-app.local/monitor.log
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK
+RAID: /dev/loop3 + /dev/loop4; LVM: /dev/loop5
+  1 logical volume(s) in volume group "vg_data" now active
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 loop4[1] loop3[0]
+      523264 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 200.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/md0                     463M   28K  427M   1% /mnt/raid
+/dev/mapper/vg_data-lv_logs  172M   40K  158M   1% /mnt/logs
+До расширения:
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 200.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/vg_data-lv_logs  172M   40K  158M   1% /mnt/logs
+  Size of logical volume vg_data/lv_logs changed from 200.00 MiB (50 extents) to 300.00 MiB (75 extents).
+  Logical volume vg_data/lv_logs successfully resized.
+resize2fs 1.46.5 (30-Dec-2021)
+Filesystem at /dev/vg_data/lv_logs is mounted on /mnt/logs; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/vg_data/lv_logs is now 76800 (4k) blocks long.
+
+После расширения:
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 300.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/vg_data-lv_logs  266M   40K  250M   1% /mnt/logs
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK

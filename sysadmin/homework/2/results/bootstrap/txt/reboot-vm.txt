@@ -1,0 +1,34 @@
+miphy-hw2
+Boot ID before: fa567a41-0626-4ee7-9029-3f2cdec8a4e8
+Boot ID after:  74fd196b-3233-41ff-8115-779b79afa306
+active
+active
+active
+enabled
+enabled
+enabled
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 loop4[1] loop3[0]
+      523264 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 300.00m                                                    
+TARGET    SOURCE   FSTYPE OPTIONS
+/mnt/raid /dev/md0 ext4   rw,relatime
+TARGET    SOURCE                      FSTYPE OPTIONS
+/mnt/logs /dev/mapper/vg_data-lv_logs ext4   rw,relatime
+/mnt/raid/keep.txt: OK
+/mnt/logs/keep.txt: OK
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:32:30 GMT
+Content-Type: application/octet-stream
+Content-Length: 5592
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 08:32:27 GMT
+
+Monitor log bytes: 5592 -> 6524
+Reboot, storage persistence, HTTPS and log growth: PASS

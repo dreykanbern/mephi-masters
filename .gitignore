@@ -22,3 +22,8 @@ __pycache__/
 
 # Resource monitoring runtime log
 /sysadmin/homework/1/my-sysadmin-scripts/monitor.log
+
+# М3–М4: временные файлы
+/sysadmin/homework/2/my-sysadmin-scripts/**/*.log
+/sysadmin/homework/2/my-sysadmin-scripts/*.img
+/sysadmin/homework/2/**/*.key

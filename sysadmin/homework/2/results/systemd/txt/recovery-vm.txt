@@ -1,0 +1,29 @@
++ set -euo pipefail
++ hostname
+miphy-hw2
++ date -Is
+2026-10-06T08:34:43+00:00
+++ docker inspect -f '{{.State.StartedAt}}' my-app
++ before=2026-10-06T08:32:27.63731797Z
+StartedAt before: 2026-10-06T08:32:27.63731797Z
++ printf 'StartedAt before: %s\n' 2026-10-06T08:32:27.63731797Z
++ docker exec my-app pkill -TERM -f '^bash /usr/local/bin/script.sh$'
++ sleep 8
+++ docker inspect -f '{{.State.StartedAt}}' my-app
+StartedAt after:  2026-10-06T08:34:46.919715927Z
++ after=2026-10-06T08:34:46.919715927Z
++ printf 'StartedAt after:  %s\n' 2026-10-06T08:34:46.919715927Z
++ [[ 2026-10-06T08:32:27.63731797Z != \2\0\2\6\-\1\0\-\0\6\T\0\8\:\3\4\:\4\6\.\9\1\9\7\1\5\9\2\7\Z ]]
++ systemctl is-active my-app
+active
++ curl -fksSI --resolve my-app.local:443:127.0.0.1 https://my-app.local/monitor.log
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:34:51 GMT
+Content-Type: application/octet-stream
+Content-Length: 31688
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 08:34:46 GMT
+
+Automatic restart after monitoring process failure: PASS
++ echo 'Automatic restart after monitoring process failure: PASS'

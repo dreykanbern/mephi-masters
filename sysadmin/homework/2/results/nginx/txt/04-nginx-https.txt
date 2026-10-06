@@ -1,0 +1,30 @@
+root@v7890:~/my-sysadmin-scripts/hw2# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+root@v7890:~/my-sysadmin-scripts/hw2# curl -I http://127.0.0.1:8080/monitor.log
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.10.12
+Date: Tue, 06 Oct 2026 09:04:59 GMT
+Content-type: application/octet-stream
+Content-Length: 398984
+Last-Modified: Tue, 06 Oct 2026 09:04:56 GMT
+
+root@v7890:~/my-sysadmin-scripts/hw2# curl -I --resolve my-app.local:80:127.0.0.1 http://my-app.local/monitor.log
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 09:05:01 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: https://my-app.local/monitor.log
+
+root@v7890:~/my-sysadmin-scripts/hw2# curl -kI https://77.238.228.246/monitor.log
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 09:05:02 GMT
+Content-Type: application/octet-stream
+Content-Length: 399925
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 09:05:01 GMT
+
+root@v7890:~/my-sysadmin-scripts/hw2#

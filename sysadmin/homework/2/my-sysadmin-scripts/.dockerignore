@@ -1,0 +1,6 @@
+**
+!Dockerfile
+!scripts/
+scripts/**
+!scripts/script.sh
+!scripts/entrypoint.sh
