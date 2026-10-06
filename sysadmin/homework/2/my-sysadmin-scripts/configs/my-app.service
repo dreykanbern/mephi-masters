@@ -1,8 +1,8 @@
 # my-app
 [Unit]
 Description=Monitoring container
-After=docker.service
-Requires=docker.service
+After=docker.service my-app-storage.service
+Requires=docker.service my-app-storage.service
 
 [Service]
 ExecStartPre=/usr/bin/mountpoint -q /mnt/logs
