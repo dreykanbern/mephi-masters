@@ -1,0 +1,22 @@
+root@v7890:~/my-sysadmin-scripts/hw2# systemctl status my-app --no-pager -n 0
+● my-app.service - Homework monitoring container
+     Loaded: loaded (/etc/systemd/system/my-app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2026-10-06 11:55:39 MSK; 9min ago
+    Process: 3782896 ExecStartPre=/usr/bin/mountpoint -q /mnt/logs (code=exited, status=0/SUCCESS)
+   Main PID: 3782897 (docker)
+      Tasks: 6 (limit: 2218)
+     Memory: 7.4M
+        CPU: 66ms
+     CGroup: /system.slice/my-app.service
+             └─3782897 /usr/bin/docker start -a my-app
+root@v7890:~/my-sysadmin-scripts/hw2# systemctl is-enabled my-app
+enabled
+root@v7890:~/my-sysadmin-scripts/hw2# systemctl status my-app-storage --no-pager -n 0
+● my-app-storage.service - Homework RAID and LVM loop storage
+     Loaded: loaded (/etc/systemd/system/my-app-storage.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Tue 2026-10-06 11:29:16 MSK; 36min ago
+   Main PID: 3776602 (code=exited, status=0/SUCCESS)
+        CPU: 1.440s
+root@v7890:~/my-sysadmin-scripts/hw2# systemctl is-enabled my-app-storage
+enabled
+root@v7890:~/my-sysadmin-scripts/hw2#

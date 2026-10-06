@@ -2,6 +2,8 @@
 set -euo pipefail
 
 pids=()
+# Функция вызывается через trap при завершении процесса.
+# shellcheck disable=SC2317
 cleanup() {
     # Оба процесса завершаются вместе; init в Docker подбирает дочерние процессы.
     if (( ${#pids[@]} )); then

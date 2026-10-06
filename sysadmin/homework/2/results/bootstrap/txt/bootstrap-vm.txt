@@ -1,0 +1,538 @@
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3633 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3907 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [508 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [576 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [6714 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [6465 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1290 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1285 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [325 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [30.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [76.8 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [15.9 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [756 B]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [70.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:28 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.9 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [676 B]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:32 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1244 kB]
+Get:33 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1052 kB]
+Get:34 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [237 kB]
+Get:35 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [23.2 kB]
+Get:36 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [69.4 kB]
+Get:37 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [12.9 kB]
+Get:38 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [544 B]
+Fetched 48.3 MB in 4s (12.8 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.29).
+curl set to manually installed.
+lvm2 is already the newest version (2.03.11-2.1ubuntu5).
+lvm2 set to manually installed.
+mdadm is already the newest version (4.2-0ubuntu2).
+mdadm set to manually installed.
+openssl is already the newest version (3.0.2-0ubuntu1.30).
+openssl set to manually installed.
+The following additional packages will be installed:
+  containerd fontconfig-config fonts-dejavu-core libdeflate0 libfontconfig1
+  libgd3 libjbig0 libjpeg-turbo8 libjpeg8 libnginx-mod-http-geoip2
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 libtiff5
+  libwebp7 libxpm4 nginx-common nginx-core runc
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-buildx docker-doc
+  rinse zfs-fuse | zfsutils libgd-tools fcgiwrap nginx-doc ssl-cert
+Recommended packages:
+  pigz ubuntu-fan
+The following NEW packages will be installed:
+  containerd docker-compose-v2 docker.io fontconfig-config fonts-dejavu-core
+  libdeflate0 libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip2 libtiff5 libwebp7 libxpm4 nginx nginx-common
+  nginx-core runc
+0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+Need to get 91.1 MB of archives.
+After this operation, 352 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 runc amd64 1.3.4-0ubuntu1~22.04.1 [9569 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 containerd amd64 2.2.1-0ubuntu1~22.04.2 [28.3 MB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 docker-compose-v2 amd64 2.40.3+ds1-0ubuntu1~22.04.1 [14.9 MB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 docker.io amd64 29.1.3-0ubuntu3~22.04.2 [35.7 MB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 fonts-dejavu-core all 2.37-2build1 [1041 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 fontconfig-config all 2.13.1-4.2ubuntu5 [29.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwebp7 amd64 1.2.2-2ubuntu0.22.04.2 [206 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.13 [185 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.4 [36.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgd3 amd64 2.3.0-2ubuntu2.3 [129 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.21 [40.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.21 [12.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.21 [15.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.21 [14.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.21 [46.3 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.21 [73.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.21 [10.1 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.21 [485 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.21 [3880 B]
+Preconfiguring packages ...
+Fetched 91.1 MB in 4s (24.6 MB/s)
+Selecting previously unselected package runc.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 64652 files and directories currently installed.)
+Preparing to unpack .../00-runc_1.3.4-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking runc (1.3.4-0ubuntu1~22.04.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../01-containerd_2.2.1-0ubuntu1~22.04.2_amd64.deb ...
+Unpacking containerd (2.2.1-0ubuntu1~22.04.2) ...
+Selecting previously unselected package docker-compose-v2.
+Preparing to unpack .../02-docker-compose-v2_2.40.3+ds1-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking docker-compose-v2 (2.40.3+ds1-0ubuntu1~22.04.1) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../03-docker.io_29.1.3-0ubuntu3~22.04.2_amd64.deb ...
+Unpacking docker.io (29.1.3-0ubuntu3~22.04.2) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../04-fonts-dejavu-core_2.37-2build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../05-fontconfig-config_2.13.1-4.2ubuntu5_all.deb ...
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../06-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../07-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../08-libjpeg-turbo8_2.1.2-0ubuntu1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../09-libjpeg8_8c-2ubuntu10_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../10-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../11-libwebp7_1.2.2-2ubuntu0.22.04.2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../12-libtiff5_4.3.0-6ubuntu0.13_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.13) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../13-libxpm4_1%3a3.5.12-1ubuntu0.22.04.4_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.4) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../14-libgd3_2.3.0-2ubuntu2.3_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../15-nginx-common_1.18.0-6ubuntu14.21_all.deb ...
+Unpacking nginx-common (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../16-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../17-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../18-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../19-libnginx-mod-mail_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../20-libnginx-mod-stream_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../21-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../22-nginx-core_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking nginx-core (1.18.0-6ubuntu14.21) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../23-nginx_1.18.0-6ubuntu14.21_amd64.deb ...
+Unpacking nginx (1.18.0-6ubuntu14.21) ...
+Setting up docker-compose-v2 (2.40.3+ds1-0ubuntu1~22.04.1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.4) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up nginx-common (1.18.0-6ubuntu14.21) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up runc (1.3.4-0ubuntu1~22.04.1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.21) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.21) ...
+Setting up containerd (2.2.1-0ubuntu1~22.04.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up libnginx-mod-mail (1.18.0-6ubuntu14.21) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up libnginx-mod-stream (1.18.0-6ubuntu14.21) ...
+Setting up docker.io (29.1.3-0ubuntu3~22.04.2) ...
+Adding group `docker' (GID 120) ...
+Done.
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.13) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.21) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.21) ...
+Setting up nginx-core (1.18.0-6ubuntu14.21) ...
+ * Upgrading binary nginx
+   ...done.
+Setting up nginx (1.18.0-6ubuntu14.21) ...
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Docker Compose version 2.40.3+ds1-0ubuntu1~22.04.1
+Created symlink /etc/systemd/system/multi-user.target.wants/my-app-storage.service → /etc/systemd/system/my-app-storage.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/my-app.service → /etc/systemd/system/my-app.service.
+RAID: /dev/loop3 + /dev/loop4; LVM: /dev/loop5
+  1 logical volume(s) in volume group "vg_data" now active
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 loop4[1] loop3[0]
+      523264 blocks super 1.2 [2/2] [UU]
+      [=======>.............]  resync = 38.5% (201984/523264) finish=0.0min speed=201984K/sec
+      
+unused devices: <none>
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 200.00m                                                    
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/md0                     463M   24K  427M   1% /mnt/raid
+/dev/mapper/vg_data-lv_logs  172M   28K  158M   1% /mnt/logs
+time="2026-10-06T08:31:52Z" level=warning msg="Docker Compose is configured to build using Bake, but buildx isn't installed"
+#0 building with "default" instance using docker driver
+
+#1 [my-app internal] load build definition from Dockerfile
+#1 transferring dockerfile: 361B done
+#1 DONE 0.0s
+
+#2 [my-app internal] load metadata for docker.io/library/ubuntu:22.04
+#2 DONE 1.8s
+
+#3 [my-app internal] load .dockerignore
+#3 transferring context: 81B done
+#3 DONE 0.0s
+
+#4 [my-app internal] load build context
+#4 transferring context: 1.55kB done
+#4 DONE 0.0s
+
+#5 [my-app 1/5] FROM docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#5 resolve docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401 done
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 0B / 29.75MB 0.2s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 4.19MB / 29.75MB 0.5s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 8.39MB / 29.75MB 0.6s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 14.68MB / 29.75MB 0.8s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 22.02MB / 29.75MB 0.9s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 26.21MB / 29.75MB 1.1s
+#5 sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 29.75MB / 29.75MB 1.1s done
+#5 extracting sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67
+#5 extracting sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67 0.4s done
+#5 DONE 1.5s
+
+#6 [my-app 2/5] RUN apt-get update     && apt-get install -y --no-install-recommends python3 procps     && rm -rf /var/lib/apt/lists/*
+#6 0.268 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 0.322 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 0.347 Get:3 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [84.6 kB]
+#6 0.374 Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7907 kB]
+#6 0.550 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 0.613 Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 0.672 Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#6 0.762 Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4417 kB]
+#6 0.893 Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1321 kB]
+#6 1.339 Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#6 1.375 Get:11 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#6 1.377 Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#6 1.382 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4757 kB]
+#6 1.472 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [8212 kB]
+#6 1.675 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1623 kB]
+#6 1.756 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [93.2 kB]
+#6 1.757 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#6 1.758 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+#6 2.065 Fetched 48.9 MB in 2s (24.9 MB/s)
+#6 2.065 Reading package lists...
+#6 2.677 Reading package lists...
+#6 3.281 Building dependency tree...
+#6 3.473 Reading state information...
+#6 3.609 procps is already the newest version (2:3.3.17-6ubuntu2.1).
+#6 3.609 The following additional packages will be installed:
+#6 3.609   libexpat1 libmpdec3 libpython3-stdlib libpython3.10-minimal
+#6 3.610   libpython3.10-stdlib libreadline8 libsqlite3-0 media-types python3-minimal
+#6 3.610   python3.10 python3.10-minimal readline-common
+#6 3.611 Suggested packages:
+#6 3.611   python3-doc python3-tk python3-venv python3.10-venv python3.10-doc binutils
+#6 3.611   binfmt-support readline-doc
+#6 3.652 The following NEW packages will be installed:
+#6 3.652   libexpat1 libmpdec3 libpython3-stdlib libpython3.10-minimal
+#6 3.653   libpython3.10-stdlib libreadline8 libsqlite3-0 media-types python3
+#6 3.653   python3-minimal python3.10 python3.10-minimal readline-common
+#6 3.858 0 upgraded, 13 newly installed, 0 to remove and 1 not upgraded.
+#6 3.858 Need to get 6564 kB of archives.
+#6 3.858 After this operation, 23.6 MB of additional disk space will be used.
+#6 3.858 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.18 [817 kB]
+#6 4.153 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.9 [96.9 kB]
+#6 4.167 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.18 [2277 kB]
+#6 4.338 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04.1 [24.3 kB]
+#6 4.339 Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+#6 4.341 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+#6 4.343 Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 readline-common all 8.1.2-1 [53.5 kB]
+#6 4.346 Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libreadline8 amd64 8.1.2-1 [153 kB]
+#6 4.355 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsqlite3-0 amd64 3.37.2-2ubuntu0.8 [642 kB]
+#6 4.393 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.18 [1850 kB]
+#6 4.458 Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.18 [508 kB]
+#6 4.470 Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04.1 [6812 B]
+#6 4.471 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04.1 [22.8 kB]
+#6 4.530 debconf: delaying package configuration, since apt-utils is not installed
+#6 4.550 Fetched 6564 kB in 1s (8110 kB/s)
+#6 4.557 Selecting previously unselected package libpython3.10-minimal:amd64.
+#6 4.557 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4393 files and directories currently installed.)
+#6 4.559 Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.18_amd64.deb ...
+#6 4.559 Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.18) ...
+#6 4.592 Selecting previously unselected package libexpat1:amd64.
+#6 4.592 Preparing to unpack .../libexpat1_2.4.7-1ubuntu0.9_amd64.deb ...
+#6 4.593 Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.9) ...
+#6 4.602 Selecting previously unselected package python3.10-minimal.
+#6 4.602 Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.18_amd64.deb ...
+#6 4.604 Unpacking python3.10-minimal (3.10.12-1~22.04.18) ...
+#6 4.625 Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.18) ...
+#6 4.628 Setting up libexpat1:amd64 (2.4.7-1ubuntu0.9) ...
+#6 4.629 Setting up python3.10-minimal (3.10.12-1~22.04.18) ...
+#6 4.894 Selecting previously unselected package python3-minimal.
+#6 4.894 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4697 files and directories currently installed.)
+#6 4.894 Preparing to unpack .../0-python3-minimal_3.10.6-1~22.04.1_amd64.deb ...
+#6 4.895 Unpacking python3-minimal (3.10.6-1~22.04.1) ...
+#6 4.903 Selecting previously unselected package media-types.
+#6 4.903 Preparing to unpack .../1-media-types_7.0.0_all.deb ...
+#6 4.904 Unpacking media-types (7.0.0) ...
+#6 4.911 Selecting previously unselected package libmpdec3:amd64.
+#6 4.912 Preparing to unpack .../2-libmpdec3_2.5.1-2build2_amd64.deb ...
+#6 4.912 Unpacking libmpdec3:amd64 (2.5.1-2build2) ...
+#6 4.919 Selecting previously unselected package readline-common.
+#6 4.920 Preparing to unpack .../3-readline-common_8.1.2-1_all.deb ...
+#6 4.921 Unpacking readline-common (8.1.2-1) ...
+#6 4.928 Selecting previously unselected package libreadline8:amd64.
+#6 4.929 Preparing to unpack .../4-libreadline8_8.1.2-1_amd64.deb ...
+#6 4.929 Unpacking libreadline8:amd64 (8.1.2-1) ...
+#6 4.937 Selecting previously unselected package libsqlite3-0:amd64.
+#6 4.937 Preparing to unpack .../5-libsqlite3-0_3.37.2-2ubuntu0.8_amd64.deb ...
+#6 4.938 Unpacking libsqlite3-0:amd64 (3.37.2-2ubuntu0.8) ...
+#6 4.948 Selecting previously unselected package libpython3.10-stdlib:amd64.
+#6 4.949 Preparing to unpack .../6-libpython3.10-stdlib_3.10.12-1~22.04.18_amd64.deb ...
+#6 4.950 Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.18) ...
+#6 4.989 Selecting previously unselected package python3.10.
+#6 4.990 Preparing to unpack .../7-python3.10_3.10.12-1~22.04.18_amd64.deb ...
+#6 4.990 Unpacking python3.10 (3.10.12-1~22.04.18) ...
+#6 4.997 Selecting previously unselected package libpython3-stdlib:amd64.
+#6 4.998 Preparing to unpack .../8-libpython3-stdlib_3.10.6-1~22.04.1_amd64.deb ...
+#6 4.999 Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 5.007 Setting up python3-minimal (3.10.6-1~22.04.1) ...
+#6 5.074 Selecting previously unselected package python3.
+#6 5.074 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5127 files and directories currently installed.)
+#6 5.076 Preparing to unpack .../python3_3.10.6-1~22.04.1_amd64.deb ...
+#6 5.078 Unpacking python3 (3.10.6-1~22.04.1) ...
+#6 5.086 Setting up media-types (7.0.0) ...
+#6 5.089 Setting up libsqlite3-0:amd64 (3.37.2-2ubuntu0.8) ...
+#6 5.090 Setting up libmpdec3:amd64 (2.5.1-2build2) ...
+#6 5.092 Setting up readline-common (8.1.2-1) ...
+#6 5.095 Setting up libreadline8:amd64 (8.1.2-1) ...
+#6 5.096 Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.18) ...
+#6 5.098 Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 5.100 Setting up python3.10 (3.10.12-1~22.04.18) ...
+#6 5.382 Setting up python3 (3.10.6-1~22.04.1) ...
+#6 5.386 running python rtupdate hooks for python3.10...
+#6 5.386 running python post-rtupdate hooks for python3.10...
+#6 5.421 Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+#6 DONE 5.4s
+
+#7 [my-app 3/5] WORKDIR /var/www
+#7 DONE 0.0s
+
+#8 [my-app 4/5] COPY script.sh entrypoint.sh /usr/local/bin/
+#8 DONE 0.0s
+
+#9 [my-app 5/5] RUN chmod +x /usr/local/bin/script.sh /usr/local/bin/entrypoint.sh
+#9 DONE 0.1s
+
+#10 [my-app] exporting to image
+#10 exporting layers
+#10 exporting layers 0.7s done
+#10 exporting manifest sha256:51006f34a52b0a0b9a99611cbb576efd8a6595d2de1ac0cdf430f9ab339e2fdb done
+#10 exporting config sha256:b6a72530bdefb9c352fbecc61bdbaf3e14e35bcba9fd73ac0e380fd4cf3c8f28 done
+#10 exporting attestation manifest sha256:b8d0c082ee0976dec6532824895abd92fe12c712d3c14d85d42544577b24099d done
+#10 exporting manifest list sha256:c951ff499d707c9b96bcfe7edb3c8f5e80a5cee0fe4fd1408d5ffdfdf227626d done
+#10 naming to docker.io/library/my-script:hw2 done
+#10 unpacking to docker.io/library/my-script:hw2
+#10 unpacking to docker.io/library/my-script:hw2 0.2s done
+#10 DONE 0.9s
+
+#11 [my-app] resolving provenance for metadata file
+#11 DONE 0.0s
+ my-app  Built
+ Network my-app_default  Creating
+ Network my-app_default  Created
+ Container my-app  Creating
+ Container my-app  Created
+ Container my-app  Starting
+ Container my-app  Started
+ Container my-app  Stopping
+ Container my-app  Stopped
+...+....+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+...+.+.....+.............+..+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..........+......+....+.....+.+.....+......+.........+.+..+.......+...+...+...+.........+..+...+.+..+....+........+.+.....+.......+.........+...+......+....................+.......+.....+..........+...+..+............+............+...+.+..+...+..........+..+.......+......+......+.....+......+.......+...+..+......+...................+.....+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+.+........+......+..................+.+......+...+.....+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...+...........+...+.+..................+...+...........................+...+........+....+..+.........+......+.........+....+...+.....+..........+............+...+..+..........+.....+................+......+...+............+......+..+......+.+...+...+.........+...........+...+....+.....+.+..+.........+..........+...+........+.........+.+..+.+............+............+..................+...+...........+.+..+...............+.......+.........+.....+.......+...+.....+......+...+.+...........+.............+...........+.......+...+...........+.............+.....+.......+...+....................+......+..............................+......+.+.....+..................+.........+.+.....+.......+..+.+...........+...+.+......+...+...+..+......+......+......+...+.........+.......+.....+......+.......+...+..+..........+..+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nginx
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:32:06 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: https://my-app.local/
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 08:32:06 GMT
+Content-Type: application/octet-stream
+Content-Length: 1864
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 08:32:03 GMT
+
+● my-app.service - Homework monitoring container
+     Loaded: loaded (/etc/systemd/system/my-app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2026-10-06 08:32:03 UTC; 3s ago
+    Process: 4004 ExecStartPre=/usr/bin/mountpoint -q /mnt/logs (code=exited, status=0/SUCCESS)
+   Main PID: 4005 (docker)
+      Tasks: 8 (limit: 3435)
+     Memory: 8.4M
+        CPU: 10ms
+     CGroup: /system.slice/my-app.service
+             └─4005 /usr/bin/docker start -a my-app
+
+Oct 06 08:32:03 miphy-hw2 docker[4005]: /dev/vda1                     12G  3.2G  8.3G  28% /usr/sbin/docker-init
+Oct 06 08:32:03 miphy-hw2 docker[4005]: /dev/mapper/vg_data-lv_logs  172M   32K  158M   1% /var/www
+Oct 06 08:32:03 miphy-hw2 docker[4005]: tmpfs                        1.5G     0  1.5G   0% /proc/acpi
+Oct 06 08:32:03 miphy-hw2 docker[4005]: tmpfs                        1.5G     0  1.5G   0% /proc/scsi
+Oct 06 08:32:03 miphy-hw2 docker[4005]: tmpfs                        1.5G     0  1.5G   0% /sys/devices/virtual/powercap
+Oct 06 08:32:03 miphy-hw2 docker[4005]: tmpfs                        1.5G     0  1.5G   0% /sys/firmware
+Oct 06 08:32:03 miphy-hw2 docker[4005]:  08:32:03 up 0 min,  0 users,  load average: 0.64, 0.17, 0.06
+Oct 06 08:32:03 miphy-hw2 docker[4005]: Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) ...
+Oct 06 08:32:06 miphy-hw2 docker[4005]: 172.18.0.1 - - [06/Oct/2026 08:32:06] "GET /monitor.log HTTP/1.1" 200 -
+Oct 06 08:32:06 miphy-hw2 docker[4005]: 172.18.0.1 - - [06/Oct/2026 08:32:06] "HEAD /monitor.log HTTP/1.0" 200 -
+Готово. Проверка: curl -k --resolve my-app.local:443:127.0.0.1 https://my-app.local/monitor.log

@@ -1,0 +1,14 @@
+root@v7890:~/my-sysadmin-scripts/hw2# curl -kI 'https://77.238.228.246/monitor.log?hw2-check'
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Oct 2026 09:05:48 GMT
+Content-Type: application/octet-stream
+Content-Length: 408394
+Connection: keep-alive
+Last-Modified: Tue, 06 Oct 2026 09:05:46 GMT
+
+root@v7890:~/my-sysadmin-scripts/hw2# journalctl -u my-app --since '2 minutes ago' --no-pager | grep hw2-check
+Oct 06 12:05:48 v7890.hosted-by-vdsina.com docker[3782897]: 172.18.0.1 - - [06/Oct/2026 09:05:48] "HEAD /monitor.log?hw2-check HTTP/1.0" 200 -
+root@v7890:~/my-sysadmin-scripts/hw2# grep hw2-check /var/log/nginx/access.log | tail -n 1
+77.238.228.246 - - [06/Oct/2026:12:05:48 +0300] "HEAD /monitor.log?hw2-check HTTP/1.1" 200 0 "-" "curl/7.81.0"
+root@v7890:~/my-sysadmin-scripts/hw2#

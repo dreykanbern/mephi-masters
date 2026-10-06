@@ -5,7 +5,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www
-COPY script.sh entrypoint.sh /usr/local/bin/
+COPY scripts/script.sh scripts/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/script.sh /usr/local/bin/entrypoint.sh
 
 EXPOSE 8080

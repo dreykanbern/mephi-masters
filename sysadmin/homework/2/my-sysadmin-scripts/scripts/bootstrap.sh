@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# М3–М4. Запуск на учебной Ubuntu 22.04/24.04: sudo ./bootstrap.sh
+# М3–М4. Запуск на учебной Ubuntu 22.04/24.04: sudo ./scripts/bootstrap.sh
 set -euo pipefail
 
 fail() { echo "Ошибка: $*" >&2; exit 1; }
 [[ $EUID -eq 0 ]] || fail "запустите через sudo"
 [[ -d /run/systemd/system ]] || fail "нужна Ubuntu с работающим systemd"
-cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
 
 # Не подменяем одноимённые файлы или контейнер другого проекта.
 for file in /etc/systemd/system/my-app.service /etc/systemd/system/my-app-storage.service \
@@ -38,14 +38,14 @@ for file in /etc/nginx/sites-enabled/* /etc/nginx/conf.d/*.conf; do
 done
 
 install -d /opt/my-app
-install -m 755 storage.sh /opt/my-app/storage.sh
+install -m 755 scripts/storage.sh /opt/my-app/storage.sh
 install -m 644 configs/my-app-storage.service /etc/systemd/system/my-app-storage.service
 install -m 644 configs/my-app.service /etc/systemd/system/my-app.service
 systemctl daemon-reload
 systemctl enable my-app-storage my-app
 systemctl start my-app-storage
 # Повторный запуск проверяет и уже активное хранилище.
-./storage.sh
+./scripts/storage.sh
 
 # Compose создаёт контейнер. Дальнейшим запуском и перезапуском управляет systemd.
 systemctl stop my-app
@@ -70,7 +70,7 @@ sleep 3
 
 # systemctl start не ждёт готовности HTTP-сервера внутри контейнера.
 ready=false
-for attempt in {1..20}; do
+for (( attempt=1; attempt<=20; attempt++ )); do
     if curl -fsS --max-time 2 http://127.0.0.1:8080/monitor.log >/dev/null; then
         ready=true
         break

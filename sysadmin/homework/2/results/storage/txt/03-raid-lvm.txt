@@ -1,0 +1,17 @@
+root@v7890:~/my-sysadmin-scripts/hw2# cat /proc/mdstat
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 loop9[1] loop4[0]
+      523264 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+root@v7890:~/my-sysadmin-scripts/hw2# pvs
+  PV          VG      Fmt  Attr PSize   PFree  
+  /dev/loop10 vg_data lvm2 a--  508.00m 208.00m
+root@v7890:~/my-sysadmin-scripts/hw2# lvs
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  lv_logs vg_data -wi-ao---- 300.00m                                                    
+root@v7890:~/my-sysadmin-scripts/hw2# df -h /mnt/raid /mnt/logs
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/md0                     463M   24K  427M   1% /mnt/raid
+/dev/mapper/vg_data-lv_logs  266M  420K  250M   1% /mnt/logs
+root@v7890:~/my-sysadmin-scripts/hw2#
