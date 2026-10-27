@@ -8,3 +8,5 @@
 javac -encoding UTF-8 --release 17 -d out src/*.java
 java -cp out Main
 ```
+
+Формулы вынесены в класс [PerimeterCalculator](src/PerimeterCalculator.java).
