@@ -8,3 +8,5 @@
 javac -encoding UTF-8 --release 17 -d out src/*.java
 java -cp out TrigCheck
 ```
+
+При любом допустимом шаге первое нарушение обнаруживается уже при `x = 0`.
