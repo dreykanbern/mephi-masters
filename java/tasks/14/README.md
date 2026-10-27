@@ -8,3 +8,5 @@
 javac -encoding UTF-8 --release 17 -d out src/*.java
 java -cp out Main
 ```
+
+Число генерируется с `seed = 12345L`. На угадывание даётся пять попыток; неверный ввод попытку не расходует.
