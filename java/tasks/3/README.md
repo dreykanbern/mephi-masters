@@ -8,3 +8,5 @@
 javac -encoding UTF-8 --release 17 -d out src/*.java
 java -cp out Main
 ```
+
+Цена присваивается переменной `ticketPrice`; программа ничего не выводит.
