@@ -12,6 +12,7 @@
 - [6 - StaticCarProject](lessons/6/StaticCarProject/) - вызов статического метода без создания объекта.
 - [7 - HelloWorldProject](lessons/7/HelloWorldProject/) - порядок вызовов методов и вывод `Hello world!`.
 - [8 - AddProject](lessons/8/AddProject/) - исправление синтаксиса и возвращаемое значение метода.
+- [9 - Третий символ строки](lessons/9/) - обращение к символу через `charAt`.
 
 ## Задачи
 
