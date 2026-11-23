@@ -97,7 +97,7 @@ public class Main {
         if (!currentTemperature.isNumber()) {
             throw new IOException("В ответе API отсутствует числовое значение fact.temp.");
         }
-        System.out.printf("Текущая температура - %s °C%n", currentTemperature.asText());
+        System.out.printf("Текущая температура: %s °C%n", currentTemperature.asText());
 
         JsonNode forecasts = weather.path("forecasts");
         if (!forecasts.isArray()) {
@@ -118,7 +118,7 @@ public class Main {
             throw new IOException("В прогнозе нет дневных температур parts.day.temp_avg.");
         }
         double average = sum / days;
-        System.out.printf(Locale.ROOT, "Средняя дневная температура (%d из %d суток) - %.2f °C%n",
+        System.out.printf(Locale.ROOT, "Средняя дневная температура (%d из %d суток): %.2f °C%n",
                 days, limit, average);
     }
 
